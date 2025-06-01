@@ -125,7 +125,7 @@ async def attack(callback: types.CallbackQuery):
         await callback.message.answer(f"💀 {target_info.user.first_name} выбыл!")
         kills[user_id] = kills.get(user_id, 0) + 1
     if not teams[enemy_team]:
-        await
+await
     declare_winner
 (team, callback.message.chat.id)
 
