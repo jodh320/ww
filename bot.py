@@ -124,8 +124,10 @@ async def attack(callback: types.CallbackQuery):
         teams[enemy_team].remove(target_id)
         await callback.message.answer(f"💀 {target_info.user.first_name} выбыл!")
         kills[user_id] = kills.get(user_id, 0) + 1
-if not teams[enemy_team]:
-        await declare_winner(team, callback.message.chat.id)
+    if not teams[enemy_team]:
+        await
+    declare_winner
+(team, callback.message.chat.id)
 
 
 @dp.callback_query_handler(lambda c: c.data == "stats")
