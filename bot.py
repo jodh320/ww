@@ -122,7 +122,7 @@ async def attack(callback: types.CallbackQuery):
 
     if hp[target_id] <= 0:
         teams[enemy_team].remove(target_id)
-        await callback.message.answer(f"💀 {target_info.user.first_name} выбыл!")
+await callback.message.answer(f"💀 {target_info.user.first_name} выбыл!")
         kills[user_id] = kills.get(user_id, 0) + 1
     if not teams[enemy_team]:
 await
